@@ -1,0 +1,30 @@
+<html>
+ <head>
+   <link rel="stylesheet" href="Dang_Hw2-1.css" type="text/css" />
+   <title>Multiplication Table</title>
+</head>
+<body>
+<table id="mytable">
+</table>
+<script type="text/javascript">
+  var table = document.getElementById("mytable");
+  var tableSize=10
+  var myTable="";
+  myTable = myTable + "<tr><th></th>";
+  for (x=1;x<=tableSize;x++) { //creates the row header
+     myTable = myTable + "<th>" + x + "</th>";
+  }
+  myTable = myTable + "</tr>";
+  for (y=1;y<=tableSize;y++) { //creates the column header
+     myTable = myTable + "<tr>";
+     myTable = myTable + "<th>" + y + "</th>";
+     for (x=1;x<=tableSize;x++) {
+        myTable = myTable + "<td>" + (x*y) + "</td>";
+     }
+     myTable = myTable + "</tr>";
+  }
+  myTable = myTable + "</table>";
+  table.innerHTML=myTable;
+</script>
+</body>
+</html>
